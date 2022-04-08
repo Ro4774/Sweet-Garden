@@ -1,0 +1,383 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  background-color: #ef9b57;
+}
+
+.header .wrapper {
+  font-family: "Caveat";
+  padding-left: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header .wrapper .logo {
+  color: #fcfcfc;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 50px;
+  min-width: 50%;
+}
+.header .wrapper .networks {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header .wrapper .networks .inst {
+  max-width: 40%;
+}
+.header .wrapper .networks .facebook {
+  max-width: 40%;
+}
+@media (max-width: 769px) {
+  .header .wrapper .inst, .header .wrapper .facebook {
+    min-width: 75%;
+  }
+}
+@media (max-width: 426px) {
+  .header .inst, .header .facebook {
+    min-width: 100%;
+  }
+}
+@media (max-width: 376px) {
+  .header .inst, .header .facebook {
+    min-width: 90%;
+  }
+}
+@media (max-width: 1025px) {
+  .header .inst, .header .facebook {
+    min-width: 60%;
+  }
+}
+
+.nav {
+  font-family: "Rosario";
+  background-image: url(../img/nav.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.nav .nav-container {
+  padding-top: 20%;
+}
+.nav .nav-container .nav-text {
+  margin-left: 15%;
+  width: 70%;
+  color: #fff;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 87px;
+  text-align: center;
+  font-size: calc(58px + 22 * (100vw / 1440));
+}
+.nav .botton {
+  margin-top: 10%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.nav .botton .btn {
+  border: 3px solid #fafafa;
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 22px;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  display: block;
+  text-align: center;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.nav .secret-point {
+  margin-top: 1%;
+}
+@media (max-width: 376px) {
+  .nav .nav-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (max-width: 321px) {
+  .nav .nav-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Rosario";
+}
+.main .main-text-container {
+  margin-left: 5%;
+  max-width: 600px;
+  line-height: 63px;
+}
+.main .main-text-0-container {
+  font-size: 50px;
+}
+.main .main-text-2-container {
+  font-size: 40px;
+}
+.main .main-photo {
+  max-width: 80%;
+  max-height: 80%;
+}
+.main .main-photo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+@media (min-width: 2559px) {
+  .main .main-photo-container {
+    margin-left: 30%;
+  }
+}
+@media (max-width: 1025px) {
+  .main .main-text-container {
+    line-height: 1.3;
+    max-width: 450px;
+  }
+  .main .main-text-0-container {
+    font-size: 40px;
+  }
+  .main .main-text-1-container {
+    font-size: 30px;
+  }
+  .main .main-text-2-container {
+    font-size: 30px;
+  }
+}
+@media (max-width: 769px) {
+  .main .main-text-container {
+    line-height: 1.45;
+    max-width: 400px;
+  }
+  .main .main-text-0-container {
+    font-size: 30px;
+  }
+  .main .main-text-1-container {
+    font-size: 20px;
+  }
+  .main .main-text-2-container {
+    font-size: 20px;
+  }
+}
+@media (max-width: 426px) {
+  .main .main-text-container {
+    line-height: 1;
+    max-width: 200px;
+  }
+  .main .main-text-0-container {
+    font-size: 20px;
+  }
+  .main .main-text-2-container {
+    font-size: 16.1px;
+  }
+  .main .main-photo {
+    max-width: 90%;
+    max-height: 90%;
+  }
+}
+@media (max-width: 376px) {
+  .main .main-photo {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+@media (max-width: 321px) {
+  .main .main-text-container {
+    max-width: 55%;
+  }
+  .main .main-photo {
+    max-width: 110%;
+    max-height: 90%;
+  }
+  .main .main-text-0-container {
+    font-size: 25px;
+  }
+  .main .main-text-2-container {
+    font-size: 12.8px;
+  }
+}
+
+.main-2 {
+  margin-bottom: 1%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Rosario";
+  /* .vectors {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -45%;
+  } */
+}
+.main-2 .main-2-text {
+  text-align: center;
+  margin-top: -5%;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 73px;
+}
+.main-2 .slider {
+  width: 320px;
+  height: 385px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+.main-2 .slider .slider-line {
+  height: 385px;
+  width: 3150px;
+  background-color: orangered;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  left: 0;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+}
+.main-2 .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 1025px) {
+  .main-2 .vectors {
+    margin-top: -63%;
+  }
+}
+@media (max-width: 769px) {
+  .main-2 .main-2-text {
+    font-size: 50px;
+  }
+}
+@media (max-width: 376px) {
+  .main-2 .main-2-text {
+    font-size: 40;
+    line-height: 1;
+    margin-top: 2%;
+  }
+}
+
+.footer {
+  font-family: "Caveat";
+  background-image: url(../img/footer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer .final-div {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer .final-div .final-p {
+  margin-top: 10%;
+  margin-right: 10%;
+  color: #fff;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+}
+.footer .secret-point-2 {
+  margin-top: 6%;
+}
